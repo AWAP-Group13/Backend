@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const V1AnnualySchema = new Schema({
+const V1AnnuallySchema = new Schema({
   timeInAnnual : Number,
   globalAnnual: Number,
   southernHemisphereAnnual: Number,
   northerHemisphereAnnual: Number,
 });
 
-const V1Annualy = mongoose.model("V1Annualy", V1AnnualySchema);
+const V1Annually = mongoose.model("V1Annually", V1AnnuallySchema);
 
-module.exports = V1Annualy;
+module.exports = V1Annually;
