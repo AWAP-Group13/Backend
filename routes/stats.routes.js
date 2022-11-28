@@ -1,6 +1,7 @@
 const express = require("express");
 const { getV1MonthlyStats, getV1AnnuallyStats, getNH2000YrsTempStats, getMaunaLoaCO2MonthlyStats,
-    getMaunaLoaCO2AnnullayStats,getDE08_DataStats,getDE08_02_DataStats,getDSS_DataStats 
+    getMaunaLoaCO2AnnullayStats,getDE08_DataStats,getDE08_02_DataStats,getDSS_DataStats ,
+    getVostok_co2_DataStats 
     } = require("../controllers/stats.controller");
 
 const router = express.Router();
@@ -12,6 +13,7 @@ router.get("/v3Annually", getMaunaLoaCO2AnnullayStats)
 router.get("/v4DE08", getDE08_DataStats);
 router.get("/v4DE08_02", getDE08_02_DataStats);
 router.get("/v4DSS", getDSS_DataStats);
+router.get("/v5", getVostok_co2_DataStats);
 
 
 
