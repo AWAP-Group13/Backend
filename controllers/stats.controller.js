@@ -8,7 +8,6 @@ const DE08_02_Data = require("../schemas/de08-02_Data_v4.schema");
 const DSS_Data = require("../schemas/dss_Data_v4.schema");
 const Vostok_co2_Data = require("../schemas/vostok_co2_data_v5.schema");
 
-
 async function getV1MonthlyStats(req, res) {
   try {
     const stats = await V1Monthly.find();
@@ -99,6 +98,14 @@ const getVostok_co2_DataStats = async (req, res) => {
   }
 };
 
-module.exports = { getV1MonthlyStats, getV1AnnuallyStats, getNH2000YrsTempStats, 
-                   getMaunaLoaCO2AnnullayStats, getMaunaLoaCO2MonthlyStats,getDE08_DataStats,
-                   getDE08_02_DataStats, getDSS_DataStats, getVostok_co2_DataStats };
+module.exports = {
+  getV1MonthlyStats,
+  getV1AnnuallyStats,
+  getNH2000YrsTempStats,
+  getMaunaLoaCO2AnnullayStats,
+  getMaunaLoaCO2MonthlyStats,
+  getDE08_DataStats,
+  getDE08_02_DataStats,
+  getDSS_DataStats,
+  getVostok_co2_DataStats,
+};
