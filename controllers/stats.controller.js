@@ -60,7 +60,7 @@ const getV3MonthlyStats = async (req, res) => {
 
 const getDE08_DataStats = async (req, res) => {
   try {
-    const stats = await DE08_Data.find();
+    const stats = await DE08_Data.find().sort([["time", 1]]);
 
     res.status(200).send({ status: "success", data: stats });
   } catch (error) {
@@ -70,7 +70,7 @@ const getDE08_DataStats = async (req, res) => {
 
 const getDE08_02_DataStats = async (req, res) => {
   try {
-    const stats = await DE08_02_Data.find();
+    const stats = await DE08_02_Data.find().sort([["time", 1]]);
 
     res.status(200).send({ status: "success", data: stats });
   } catch (error) {
@@ -80,7 +80,7 @@ const getDE08_02_DataStats = async (req, res) => {
 
 const getDSS_DataStats = async (req, res) => {
   try {
-    const stats = await DSS_Data.find();
+    const stats = await DSS_Data.find().sort([["time", 1]]);
 
     res.status(200).send({ status: "success", data: stats });
   } catch (error) {
