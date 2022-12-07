@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const Vostok_co2_DataSchema = new Schema({
   time: Number,
-  co2: Number,
+  co2_measurements: Number,
 });
 
 const Vostok_co2_Data = mongoose.model(
