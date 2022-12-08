@@ -8,6 +8,8 @@ const DE08_02_Data = require("../schemas/de08-02_Data_v4.schema");
 const DSS_Data = require("../schemas/dss_Data_v4.schema");
 const Vostok_co2_Data = require("../schemas/vostok_co2_data_v5.schema");
 const V6 = require("../schemas/v6.schema");
+const surfaceTempV7 = require("../schemas/surfaceTempV7.schema");
+const co2DataV7 = require("../schemas/co2DataV7.schema");
 
 async function getV1MonthlyStats(req, res) {
   try {
@@ -109,6 +111,26 @@ const getV6Stats = async (req, res) => {
   }
 };
 
+const getsurfaceTempV7Stats = async (req, res) => {
+  try {
+    const stats = await surfaceTempV7.find();
+
+    res.status(200).send({ status: "success", data: stats });
+  } catch (error) {
+    res.status(400).send({ status: "error", error: error.message });
+  }
+};
+
+const getco2DataV7Stats = async (req, res) => {
+  try {
+    const stats = await co2DataV7.find();
+
+    res.status(200).send({ status: "success", data: stats });
+  } catch (error) {
+    res.status(400).send({ status: "error", error: error.message });
+  }
+};
+
 module.exports = {
   getV1MonthlyStats,
   getV1AnnuallyStats,
@@ -119,5 +141,7 @@ module.exports = {
   getDE08_02_DataStats,
   getDSS_DataStats,
   getVostok_co2_DataStats,
-  getV6Stats
+  getV6Stats,
+  getsurfaceTempV7Stats,
+  getco2DataV7Stats,
 };
