@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const V8Schema = new Schema({
+  time: Number,
   Afghanistan: Number,
   Albania: Number,
   Algeria: Number,
