@@ -12,6 +12,7 @@ const {
   getV6Stats,
   getsurfaceTempV7Stats,
   getco2DataV7Stats,
+  getV8Stats,
 } = require("../controllers/stats.controller");
 
 const router = express.Router();
@@ -27,6 +28,7 @@ router.get("/v5", getVostok_co2_DataStats);
 router.get("/v6", getV6Stats);
 router.get("/v7surfaceTemp", getsurfaceTempV7Stats);
 router.get("/v7co2Data", getco2DataV7Stats);
+router.get("/v8", getV8Stats);
 
 
 module.exports = router;
