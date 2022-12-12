@@ -11,6 +11,7 @@ const V6 = require("../schemas/v6.schema");
 const surfaceTempV7 = require("../schemas/surfaceTempV7.schema");
 const co2DataV7 = require("../schemas/co2DataV7.schema");
 const V8 = require("../schemas/v8.schema");
+const V9Sector = require("../schemas/v9Sector.schema");
 
 async function getV1MonthlyStats(req, res) {
   try {
@@ -142,6 +143,16 @@ const getV8Stats = async (req, res) => {
   }
 };
 
+const getV9SectorStats = async (req, res) => {
+  try {
+    const stats = await V9Sector.find();
+
+    res.status(200).send({ status: "success", data: stats });
+  } catch (error) {
+    res.status(400).send({ status: "error", error: error.message });
+  }
+};
+
 
 module.exports = {
   getV1MonthlyStats,
@@ -157,4 +168,5 @@ module.exports = {
   getsurfaceTempV7Stats,
   getco2DataV7Stats,
   getV8Stats,
+  getV9SectorStats,
 };
