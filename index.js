@@ -11,6 +11,7 @@ const initMongoose = require("./lib/mongoose");
 initMongoose();
 
 const statsRoutes = require("./routes/stats.routes");
+const authRoutes = require("./routes/auth.routes");
 
 app.use(bodyParser.json());
 
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/stats", statsRoutes);
+app.use("/auth", authRoutes);
 
 app.listen(4000, () => {
   console.log("Starting on port 4000");
