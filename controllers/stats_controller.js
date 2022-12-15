@@ -1,18 +1,18 @@
-const V1Monthly = require("../schemas/v1Monthly.schema");
-const V1Annually = require("../schemas/v1Annually.schema");
-const NH2000YrsTemp = require("../schemas/nH2000YrsTemp.schema");
+const V1Monthly = require("../schemas/v1Monthly_schema");
+const V1Annually = require("../schemas/v1Annually_schema");
+const NH2000YrsTemp = require("../schemas/nH2000YrsTemp_schema");
 const V3Monthly = require("../schemas/v3Monthly");
 const V3Annually = require("../schemas/v3Annually");
-const DE08_Data = require("../schemas/de08_Data_v4.schema");
-const DE08_02_Data = require("../schemas/de08-02_Data_v4.schema");
-const DSS_Data = require("../schemas/dss_Data_v4.schema");
-const Vostok_co2_Data = require("../schemas/vostok_co2_data_v5.schema");
+const DE08_Data = require("../schemas/de08_Data_v4_schema");
+const DE08_02_Data = require("../schemas/de08-02_Data_v4_schema");
+const DSS_Data = require("../schemas/dss_Data_v4_schema");
+const Vostok_co2_Data = require("../schemas/vostok_co2_data_v5_schema");
 const V6 = require("../schemas/v6.schema");
-const surfaceTempV7 = require("../schemas/surfaceTempV7.schema");
-const co2DataV7 = require("../schemas/co2DataV7.schema");
+const surfaceTempV7 = require("../schemas/surfaceTempV7_schema");
+const co2DataV7 = require("../schemas/co2DataV7_schema");
 const V8 = require("../schemas/V8.schema");
-const V9Sector = require("../schemas/v9Sector.schema");
-const V9SubSector = require("../schemas/v9SubSector.schema");
+const V9Sector = require("../schemas/V9Sector_schema");
+const V9SubSector = require("../schemas/V9SubSector_schema");
 
 async function getV1MonthlyStats(req, res) {
   try {

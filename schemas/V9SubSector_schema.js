@@ -7,6 +7,10 @@ const V9SubSectorSchema = new Schema({
   forSector: String,
 });
 
-const V9SubSector = mongoose.model("V9SubSector", V9SubSectorSchema, "V9SubSector");
+const V9SubSector = mongoose.model(
+  "V9SubSector",
+  V9SubSectorSchema,
+  "V9SubSector"
+);
 
 module.exports = V9SubSector;

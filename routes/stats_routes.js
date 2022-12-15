@@ -15,7 +15,7 @@ const {
   getV8Stats,
   getV9SectorStats,
   getV9SubSectorStats,
-} = require("../controllers/stats.controller");
+} = require("../controllers/stats_controller");
 
 const router = express.Router();
 router.get("/v1Monthly", getV1MonthlyStats);
@@ -33,6 +33,5 @@ router.get("/v7co2Data", getco2DataV7Stats);
 router.get("/v8", getV8Stats);
 router.get("/v9Sector", getV9SectorStats);
 router.get("/v9SubSector", getV9SubSectorStats);
-
 
 module.exports = router;
