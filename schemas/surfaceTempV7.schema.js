@@ -6,6 +6,10 @@ const surfaceTempV7Schema = new Schema({
   temperature: Number,
 });
 
-const surfaceTempV7 = mongoose.model("surfaceTempV7", surfaceTempV7Schema, "surfaceTempV7");
+const surfaceTempV7 = mongoose.model(
+  "surfaceTempV7",
+  surfaceTempV7Schema,
+  "surfaceTempV7"
+);
 
 module.exports = surfaceTempV7;
