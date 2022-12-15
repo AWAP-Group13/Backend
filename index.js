@@ -22,6 +22,8 @@ app.get("/", (req, res) => {
 app.use("/stats", statsRoutes);
 app.use("/auth", authRoutes);
 
+const PORT = process.env.PORT || 4000;
+
 app.listen(4000, () => {
   console.log("Starting on port 4000");
 });
