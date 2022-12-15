@@ -1,6 +1,8 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const cors = require("cors");
+const statsRoutes = require("./routes/stats.routes");
+const authRoutes = require("./routes/auth.routes");
 require("dotenv").config();
 
 const app = express();
@@ -9,9 +11,6 @@ app.use(cors());
 
 const initMongoose = require("./lib/mongoose");
 initMongoose();
-
-const statsRoutes = require("./routes/stats.routes");
-const authRoutes = require("./routes/auth.routes");
 
 app.use(bodyParser.json());
 
