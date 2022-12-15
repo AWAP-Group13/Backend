@@ -1,0 +1,4 @@
+runtime: nodejs16
+env_variables:
+  NODE_ENV: production
+  MONGO_URL: mongodb+srv://admin:admn@climatedata.wwhujcy.mongodb.net/dataVisualization?
