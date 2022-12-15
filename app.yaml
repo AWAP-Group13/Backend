@@ -1,4 +1,4 @@
 runtime: nodejs16
 env_variables:
   NODE_ENV: production
-  MONGO_URL: mongodb+srv://admin:admn@climatedata.wwhujcy.mongodb.net/dataVisualization?
+  MONGO_URL: mongodb+srv://admin:admin@climatedata.wwhujcy.mongodb.net/dataVisualization?retryWrites=true&w=majority
